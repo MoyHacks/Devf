@@ -10,13 +10,14 @@
     color: grey;
 }
 .member-footer .social-links {
-    justify-content:center;
+    margin-left: 40px;
+    justify-content:start;
     display: flex;
-    flex: auto;
+    flex:content;
     margin-bottom: 1em;
 }
 .member-footer .service-code {
-
+    padding-bottom: 110px;
     margin-bottom: 20px;
     font-size: 13px;
     padding: 0.5em;
@@ -146,12 +147,15 @@ background-color: rgba(51, 51,51,0.5);
 a{
     color:grey;
 }
-.button_codigo{
-    justify-content: center;
+.member-footer .button_codigo{
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-bottom: 15px;
     border: solid 1px grey;
-    
     background-color:grey;
-
+}
+.member-footer .copyright{
+    margin-left: 40px;
 }
 
 
