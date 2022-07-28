@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/resources/js/main.js"></script>
+    <title>Cajero</title>
+</head> 
+<body>
+    <button  onclick= "consultar()" type="button" data-toggle="modal" data-target="#modal" >Consultar</button>
+    <button   type="button" class="btn btn-success" data-toggle="modal" data-target="#ingresar" >Ingresar</button>
+    <button   type="button" class="btn btn-info" data-toggle="modal" data-target="#retirar" >Retirar</button>
+    <button  onclick="logout()" type="button" class="btn btn-danger" >Salir</button>
+
+    <!--Consultar-->
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <input id="nombre" name="nombre"  class="form-control" tabindex="1" type="text"  disabled >
+                <input id="saldo" name="saldo"  class="form-control" tabindex="2" type="number"  disabled >
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Ingresar-->
+    <div id="ingresar" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            
+          </div>
+          <div class="modal-body">
+            <h4>Importe:</h4>
+              <input id="cantidad_ingreso" min="1" name="saldo"  placeholder="$0.00" class="form-control" tabindex="1" type="number"  onkeypress="return event.charCode >= 48" autofocus>
+          </div>
+          <div class="modal-footer">
+            <button onclick="ingresar()" type="button" class="btn btn-success">Ingresar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!--Retirar-->
+        <div id="retirar" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Retiro</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <h3>Importe:</h3>
+                  <input id="cantidad_retiro" min="1" placeholder="$0.00"  name="cantidad_retiro"  class="form-control" tabindex="2" type="number"  onkeypress="return event.charCode >= 48" autofocus>
+              </div>
+              <div class="modal-footer">
+                <button onclick="retirar()" type="button" class="btn btn-success" >Retirar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</body>
+</html>
