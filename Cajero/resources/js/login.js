@@ -13,6 +13,7 @@ function iniciar(){
     }
 }
 
+
 function buscar(username,pin){
     const json = jsonData.accounts;
     localStorage.setItem("accounts",JSON.stringify(json));
